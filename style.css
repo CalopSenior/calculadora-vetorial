@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+:root {
+    --bc: #3b3333;
+    --gc: #cec2c2;
+}
+.container {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+}
+.container input[type="number"], input[type="text"] {
+    border: none;
+    border-bottom: 1px solid var(--bc);
+    width: 35px;
+    text-align: center;
+    outline: none;
+    cursor: default;
+    &:read-only {
+        width: 100%;
+    }
+}
+.container input[type="submit"] {
+    background: transparent;
+    border: none;
+    position: absolute;
+    right: 2%;
+}
+.container label {
+    display: flex;
+    flex-direction: row;
+    background: var(--gc);
+    border-radius: 15px;
+    padding: 10px;
+    gap: 3px;
+    & *{
+        user-select: none;
+        cursor: pointer;
+    }
+    &.op > input[type="number"], input[type="text"] {
+        background: transparent;
+        border: none;
+        font-size: 1em;
+        text-align: left;
+    }
+    &.op > p.off {
+        padding-top: 10px;
+    }
+}
+.container > .container {
+    width: 100vw;
+    border-top: 2px solid var(--bc);
+    border-bottom: 2px solid var(--bc);
+    margin: 10px 0 10px 0;
+    padding: 15px;
+}

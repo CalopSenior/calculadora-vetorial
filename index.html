@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Vetores</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./js/main.js"></script>
+    <script defer src="./js/calculator.js"></script>
+</head>
+<body>
+    
+    <div class="container">
+        <div style="display: flex; flex-direction: row;">
+            <p>Vetor = (</p>
+            <input id="xv" type="number" placeholder="x">
+            <p>, </p>
+            <input id="yv" type="number" placeholder="y">
+            <p>, </p>
+            <input id="zv" type="number" placeholder="z">
+            <p>)</p>
+        </div>
+        <button id="bcv">Adicionar vetor</button>
+    </div>
+
+    <div class="container" id="vectorTable"></div>
+
+    <div class="container">
+        <div class="container">
+            <p>Módulo do vetor</p>
+            <label class="op" for="module">
+                <p>V</p>
+                <input id="opm" class="ops" type="number" name="module" placeholder="?" min="0" max="0">
+                <p>=</p>
+                <input id="rm" type="number" readonly>
+                <input id="module" type="submit" value="calcular">
+            </label>
+        </div>
+
+        <div class="container">
+            <p>Vetor Unitário</p>
+            <label class="op" for="versor">
+                <p>V</p>
+                <input id="opu" class="ops" type="number" name="versor" placeholder="?" min="0" max="0">
+                <p>=</p>
+                <input id="ru" type="text" readonly>
+                <input id="versor" type="submit" value="calcular">
+            </label>
+        </div>
+
+        <div class="container">
+            <p>Multiplicação por Escalar</p>
+            <label class="op" for="dot">
+                <p>V</p>
+                <input id="opd" class="ops" type="number" name="dot" placeholder="?" min="0" max="0">
+                <p>=</p>
+                <input id="rd" type="text" readonly>
+                <input id="dot" type="submit" value="calcular">
+            </label>
+        </div>
+
+        <div class="container">
+            <p>Teste de Colinearidade</p>
+            <label class="op" for="cl">
+                <label class="op">
+                    <p>V</p>
+                    <input id="opc1" class="ops" type="number" placeholder="?" min="0" max="0">
+                </label>
+                <p class="off"> colinear </p>
+                <label class="op">
+                    <p>V</p>
+                    <input id="opc2" class="ops" type="number" placeholder="?" min="0" max="0">
+                </label>
+                <p class="off">?</p>
+                <input id="rc" type="text" readonly>
+                <input id="cl" type="submit" value="calcular">
+            </label>
+        </div>
+
+        <div class="container">
+            <p>Soma de Vetores</p>
+            <label class="op" for="sum">
+                <label class="op">
+                    <p>V</p>
+                    <input id="ops1" class="ops" type="number" placeholder="?" min="0" max="0">
+                </label>
+                <p class="off">+</p>
+                <label class="op">
+                    <p>V</p>
+                    <input id="ops2" class="ops" type="number" placeholder="?" min="0" max="0">
+                </label>
+                <p class="off">=</p>
+                <input id="rs" type="text" readonly>
+                <input id="sum" type="submit" value="calcular">
+            </label>
+        </div>
+
+        <div class="container">
+            <p>Subtração de Vetores</p>
+            <label class="op" for="sub">
+                <label class="op">
+                    <p>V</p>
+                    <input id="opsm1" class="ops" type="number" placeholder="?" min="0" max="0">
+                </label>
+                <p class="off">-</p>
+                <label class="op">
+                    <p>V</p>
+                    <input id="opsm2" class="ops" type="number" placeholder="?" min="0" max="0">
+                </label>
+                <p class="off">=</p>
+                <input id="rsm" type="text" readonly>
+                <input id="sub" type="submit" value="calcular">
+            </label>
+        </div>
+
+        <div class="container">
+            <p>Produto Escalar</p>
+            <label class="op" for="pe">
+                <label class="op">
+                    <p>V</p>
+                    <input id="ope1" class="ops" type="number" placeholder="?" min="0" max="0">
+                </label>
+                <p class="off">•</p>
+                <label class="op">
+                    <p>V</p>
+                    <input id="ope2" class="ops" type="number" placeholder="?" min="0" max="0">
+                </label>
+                <p class="off">=</p>
+                <input id="rpe" type="text" readonly>
+                <input id="pe" type="submit" value="calcular">
+            </label>
+        </div>
+
+        <div class="container">
+            <p>Produto Vetorial</p>
+            <label class="op" for="pv">
+                <label class="op">
+                    <p>V</p>
+                    <input id="opv1" class="ops" type="number" placeholder="?" min="0" max="0">
+                </label>
+                <p class="off">⨯</p>
+                <label class="op">
+                    <p>V</p>
+                    <input id="opv2" class="ops" type="number" placeholder="?" min="0" max="0">
+                </label>
+                <p class="off">=</p>
+                <input id="rpv" type="text" readonly>
+                <input id="pv" type="submit" value="calcular">
+            </label>
+        </div>     
+        
+        <div class="container">
+            <p>Ângulo entre Vetores</p>
+            <label class="op" for="oa">
+                <label class="op">
+                    <p>V</p>
+                    <input id="opa1" class="ops" type="number" placeholder="?" min="0" max="0">
+                </label>
+                <p class="off">∠</p>
+                <label class="op">
+                    <p>V</p>
+                    <input id="opa2" class="ops" type="number" placeholder="?" min="0" max="0">
+                </label>
+                <p class="off">=</p>
+                <input id="ra" type="text" readonly>
+                <input id="oa" type="submit" value="calcular">
+            </label>
+        </div>  
+
+        <div class="container">
+            <p>Vetor Projeção</p>
+            <label class="op" for="ovp">
+                <label class="op">
+                    <p>V</p>
+                    <input id="opvp1" class="ops" type="number" placeholder="?" min="0" max="0">
+                </label>
+                <p class="off">sobre</p>
+                <label class="op">
+                    <p>V</p>
+                    <input id="opvp2" class="ops" type="number" placeholder="?" min="0" max="0">
+                </label>
+                <p class="off">=</p>
+                <input id="rvp" type="text" readonly>
+                <input id="ovp" type="submit" value="calcular">
+            </label>
+        </div>
+        
+    </div>
+
+</body>
+</html>
